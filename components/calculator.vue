@@ -1,21 +1,24 @@
 <template>
-  <div class="flex">
-    <!-- Column 1 -->
-    <div class="mr-2 bg-gray-800 w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 p-3">
-      Column 1
+
+  <div>
+    <div class="p-5 flex justify-between">
+      <div class="font-bold text-5xl text-stone-700">
+        # Make <span class="underline">this</span> page using <span class="bg-lime-600 text-white">Nuxt.js</span> & <span class="text-white bg-sky-500">Tailwind CSS</span>
+      </div>
+      <div class="text-sm mt-auto">
+        (hosted on Github Pages as a <span class="text-stone-700 underline">responsive</span> and <span class="underline">static</span> website)
+      </div>
     </div>
 
-    <!-- Column 2 -->
-    <div class="bg-rose-300 w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 p-3">
-      Column 2
+    <div class="mr-3 ml-3">
+      <div class="bg-zinc-800 p-96 mb-3 border-4 border-zinc-500 rounded">
+        <div class="text-white font-bold text-center text-5xl relative bottom-80">
+          mYminicaLc
+        </div>
+
+        <input class="w-80 h-14 border-2 border-zinc-500 rounded relative bottom-80">
+      </div>
     </div>
 
-    <!-- Column 3 -->
-    <div class="bg-gray-500 w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 p-3">
-      Column 3
-    </div>
-    <div class="bg-gray-800 w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 p-3">
-      Column 1
-    </div>
   </div>
 </template>
