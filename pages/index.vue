@@ -1,7 +1,7 @@
 <template>
   <div class="w-screen h-screen p-3">
     <div class="h-full flex flex-col">
-      <Title />
+      <HeadTitle />
       <Calculator />
     </div>
   </div>
@@ -9,10 +9,10 @@
 
 <script>
 import Calculator from "../components/Calculator.vue";
-import Title from "../components/Title.vue";
+import HeadTitle from "../components/HeadTitle.vue";
 
 export default {
   name: 'IndexPage',
-  components: {Title, Calculator}
+  components: {HeadTitle, Calculator}
 }
 </script>
