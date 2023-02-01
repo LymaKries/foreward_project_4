@@ -1,5 +1,5 @@
 <template>
-  <div>{{title}}</div>
+  <div class="text-rose-500">{{title}}</div>
 </template>
 
 <script>
