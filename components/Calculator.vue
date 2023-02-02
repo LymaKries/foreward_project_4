@@ -8,7 +8,7 @@
 
         <div class="w-80 h-96 bg-neutral-700 mb-3 border-4 border-zinc-400 rounded">
           <div class="grid grid-cols-4 grid-rows-5 gap-2 p-3">
-            <BigButton class="bg-neutral-300 border-amber-500 text-neutral-400"
+            <BigButton @click="ac" class="bg-neutral-300 border-amber-500 text-neutral-400"
               big_button="AC"
             />
 
@@ -88,8 +88,22 @@
     </div>
   </div>
 </template>
+
+
+<script>
+
+export default {
+  data() {
+    return {
+      ac: "hey",
+    };
+  },
+}
+</script>
+
 <script setup>
 import BottomText from "./BottomText.vue";
 import SmallButton from "./SmallButton.vue";
 import BigButton from "./BigButton.vue";
+
 </script>
