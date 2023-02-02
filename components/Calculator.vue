@@ -8,83 +8,83 @@
         <div class="w-96 h-96 bg-zinc-700 mb-3 border-4 border-zinc-400 rounded">
           <div class="grid grid-cols-4 grids-rows-5 gap-2">
             <Buttons
-              title="grand"
+              big_button1="grand"
             />
 
             <Buttons
-              title="grand"
+              big_button1="grand"
             />
 
             <Buttons
-              title="orange"
+              orange_button="orange"
             />
 
             <Buttons
-              title="orange"
+              orange_button="orange"
             />
 
             <Buttons
-              title="gris"
+              grey_button="gris"
             />
 
             <Buttons
-              title="gris"
+              grey_button="gris"
             />
 
             <Buttons
-              title="gris"
+              grey_button="gris"
             />
 
             <Buttons
-              title="orange"
+              orange_button="orange"
             />
 
             <Buttons
-              title="gris"
+              grey_button="gris"
             />
 
             <Buttons
-              title="gris"
+              grey_button="gris"
             />
 
             <Buttons
-              title="gris"
+              grey_button="gris"
             />
 
             <Buttons
-              title="orange"
+              orange_button="orange"
             />
 
             <Buttons
-              title="gris"
+              grey_button="gris"
             />
 
             <Buttons
-              title="gris"
+              grey_button="gris"
             />
 
             <Buttons
-              title="gris"
+              grey_button="gris"
             />
 
             <Buttons
-              title="orange"
+              orange_button="orange"
             />
 
             <Buttons
-              title="grand"
+              big_button2="grand"
             />
 
             <Buttons
-              title="grand"
+              big_button2="grand"
             />
 
             <Buttons
-              title="gris"
+              grey_button="gris"
             />
 
             <Buttons
-              title="orange"
+              orange_button="orange"
             />
           </div>
         </div>
