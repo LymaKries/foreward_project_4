@@ -3,82 +3,99 @@
     <div class="h-full flex flex-col justify-evenly content-evenly">
       <Title />
 
-      <div class="w-full flex flex-col items-center">
-        <div class="w-80 h-14 mb-3 bg-gray-200 border-2 border-zinc-500 rounded bottom-80">{{input}}</div>
+      <div class="w-full flex flex-col items-center ">
+        <div class="w-80 h-14 pr-1 mb-3 bg-gray-200 border-2 border-zinc-500 rounded bottom-80 text-3xl flex items-center justify-end">{{input}}</div>
 
-        <div class="w-80 h-96 bg-neutral-700 mb-3 border-4 border-zinc-400 rounded">
+        <div class="w-80 h-96 bg-neutral-700 mb-3 border-4 border-zinc-400 rounded-lg">
           <div class="grid grid-cols-4 grid-rows-5 gap-2 p-3">
-            <button @click="ac">Bonjour</button>
-            <BigButton class="bg-neutral-300 border-amber-500 text-neutral-400"
-              big_button="AC"
+            <BigButton class="bg-neutral-300 border-amber-500 text-neutral-400 pl-3"
+                       big_button="AC"
+                       @button="ac"
             />
 
-            <SmallButton class="bg-amber-500"
-              small_button="="
+            <SmallButton class="bg-amber-500 border-amber-500 border-slate-500"
+                         small_button="="
+                         @button="ac"
             />
 
-            <SmallButton class="bg-amber-500"
-              small_button="%"
-            />
-
-            <SmallButton class="border-neutral-300 bg-neutral-400"
-              small_button="7"
-            />
-
-            <SmallButton class="border-neutral-300 bg-neutral-400"
-              small_button="8"
+            <SmallButton class="bg-amber-500 border-slate-500"
+                         small_button="%"
+                         @button="ac"
             />
 
             <SmallButton class="border-neutral-300 bg-neutral-400"
-              small_button="9"
-            />
-
-            <SmallButton class="bg-amber-500"
-              small_button="÷"
+                         small_button="7"
+                         @button="ac"
             />
 
             <SmallButton class="border-neutral-300 bg-neutral-400"
-              small_button="4"
+                         small_button="8"
+                         @button="ac"
             />
 
             <SmallButton class="border-neutral-300 bg-neutral-400"
-              small_button="5"
+                         small_button="9"
+                         @button="ac"
+            />
+
+            <SmallButton class="bg-amber-500 border-slate-500"
+                         small_button="÷"
+                         @button="ac"
             />
 
             <SmallButton class="border-neutral-300 bg-neutral-400"
-              small_button="6"
-            />
-
-            <SmallButton class="bg-amber-500"
-              small_button="X"
+                         small_button="4"
+                         @button="ac"
             />
 
             <SmallButton class="border-neutral-300 bg-neutral-400"
-              small_button="1"
+                         small_button="5"
+                         @button="ac"
             />
 
             <SmallButton class="border-neutral-300 bg-neutral-400"
-              small_button="2"
+                         small_button="6"
+                         @button="ac"
+            />
+
+            <SmallButton class="bg-amber-500 border-slate-500"
+                         small_button="X"
+                         @button="ac"
             />
 
             <SmallButton class="border-neutral-300 bg-neutral-400"
-              small_button="3"
-            />
-
-            <SmallButton class="bg-amber-500"
-              small_button="-"
-            />
-
-            <BigButton class="bg-neutral-400 border-neutral-300 bg-neutral-400 text-white"
-              big_button="0"
+                         small_button="1"
+                         @button="ac"
             />
 
             <SmallButton class="border-neutral-300 bg-neutral-400"
-              small_button="."
+                         small_button="2"
+                         @button="ac"
             />
 
-            <SmallButton class="bg-amber-500"
-              small_button="+"
+            <SmallButton class="border-neutral-300 bg-neutral-400"
+                         small_button="3"
+                         @button="ac"
+            />
+
+            <SmallButton class="bg-amber-500 border-slate-500"
+                         small_button="-"
+                         @button="ac"
+            />
+
+            <BigButton class="bg-neutral-400 border-neutral-300 bg-neutral-400 text-white justify-center"
+                       big_button="0"
+                       @button="ac"
+            />
+
+            <SmallButton class="border-neutral-300 bg-neutral-400"
+                         small_button="."
+                         @button="ac"
+            />
+
+            <SmallButton class="bg-amber-500 border-slate-500"
+                         small_button="+"
+                         @button="ac"
             />
           </div>
         </div>
@@ -101,11 +118,15 @@ export default {
   data() {
     return {
       input: 0,
+      operation: 0,
+      result:0,
     };
   },
   methods : {
     ac: function() {
-      this.input = 1;
+      this.result = 2;
+      this.input = this.result;
+      console.log('hey')
     }
   }
 }
