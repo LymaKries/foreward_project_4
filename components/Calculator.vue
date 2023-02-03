@@ -4,11 +4,12 @@
       <Title />
 
       <div class="w-full flex flex-col items-center">
-        <div class="w-80 h-14 mb-3 bg-gray-200 border-2 border-zinc-500 rounded bottom-80"></div>
+        <div class="w-80 h-14 mb-3 bg-gray-200 border-2 border-zinc-500 rounded bottom-80">{{input}}</div>
 
         <div class="w-80 h-96 bg-neutral-700 mb-3 border-4 border-zinc-400 rounded">
           <div class="grid grid-cols-4 grid-rows-5 gap-2 p-3">
-            <BigButton @click="ac" class="bg-neutral-300 border-amber-500 text-neutral-400"
+            <button @click="ac">Bonjour</button>
+            <BigButton class="bg-neutral-300 border-amber-500 text-neutral-400"
               big_button="AC"
             />
 
@@ -48,7 +49,7 @@
               small_button="6"
             />
 
-            <SmallButton class="border-neutral-300 bg-neutral-400"
+            <SmallButton class="bg-amber-500"
               small_button="X"
             />
 
@@ -92,18 +93,21 @@
 
 <script>
 
-export default {
-  data() {
-    return {
-      ac: "hey",
-    };
-  },
-}
-</script>
-
-<script setup>
 import BottomText from "./BottomText.vue";
 import SmallButton from "./SmallButton.vue";
 import BigButton from "./BigButton.vue";
+
+export default {
+  data() {
+    return {
+      input: 0,
+    };
+  },
+  methods : {
+    ac: function() {
+      this.input = 1;
+    }
+  }
+}
 
 </script>
