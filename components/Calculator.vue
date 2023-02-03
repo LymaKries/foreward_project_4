@@ -15,7 +15,7 @@
 
             <SmallButton class="bg-amber-500 border-amber-500 border-slate-500"
                          small_button="="
-                         @button="equal"
+                         @button="res"
             />
 
             <SmallButton class="bg-amber-500 border-slate-500"
@@ -124,7 +124,8 @@ export default {
   },
   methods : {
     ac() {
-      this.operation = 0;
+      this.operation = "";
+      this.result = 0;
       this.input = 0;
     },
 
@@ -139,21 +140,53 @@ export default {
 
       for (var i = 0; i < this.operation.length; i++) {
         if (this.operation[i] === "+"){
-          this.operation = this.operation . "1";
-          console.log('second')
+          this.operation += "1";
+          this.result += 1;
+          console.log(this.result)
         }
       }
     },
 
+
     two() {
-      this.operation = 2;
       this.input = 2;
+
+      if (this.operation === "") {
+        this.operation = 2;
+        this.result = 2;
+        console.log('first')
+      }
+
+      for (var i = 0; i < this.operation.length; i++) {
+        if (this.operation[i] === "+"){
+          this.operation += "2";
+          this.result += 2;
+          console.log(this.result)
+        }
+      }
+    },
+
+    addition() {
+      if (this.operation === "") {
+        this.operation = "0+";
+      }
+
+      this.operation += "+";
+
+      // for (var i = 0; i < this.operation.length; i++) {
+      //   if (this.operation[i] === "+") {
+      //
+      //   }
+    },
+
+    res() {
+      this.input = this.result;
     },
 
     // addition() {
     //   this.operation
     // }
-  },
+    },
 }
 
 </script>
