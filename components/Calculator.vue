@@ -127,26 +127,36 @@ export default {
       this.operation = "";
       this.result = 0;
       this.input = 0;
+      console.log(this.result)
+      console.log(this.operation)
+
     },
 
     one() {
       this.input = 1;
 
       if (this.operation === "") {
+        this.input = 1;
         this.operation = 1;
         this.result = 1;
-        console.log('first')
+        console.log('vide')
+        console.log(this.operation)
+        console.log(this.result)
       }
 
       for (var i = 0; i < this.operation.length; i++) {
         if (this.operation[i] === "+"){
+          this.input = 1;
           this.operation += "1";
           this.result += 1;
+          console.log('ya un +')
+          console.log(this.operation)
           console.log(this.result)
+          return;
         }
+
       }
     },
-
 
     two() {
       this.input = 2;
@@ -154,15 +164,30 @@ export default {
       if (this.operation === "") {
         this.operation = 2;
         this.result = 2;
-        console.log('first')
+        console.log(this.operation)
+        console.log(this.result)
       }
 
       for (var i = 0; i < this.operation.length; i++) {
         if (this.operation[i] === "+"){
+          this.input = 2;
           this.operation += "2";
           this.result += 2;
+          console.log('ya un +')
+          console.log(this.operation)
           console.log(this.result)
+          return;
         }
+
+        // if (this.operation.length > 0 && this.operation.lenght-1 !== "+"){
+        //     this.input += 2;
+        //     this.operation += "2";
+        //     this.result += 2;
+        //     console.log('rajoute chiffre')
+        //     console.log(this.operation)
+        //     console.log(this.result)
+        //     return;
+        // }
       }
     },
 
@@ -173,14 +198,14 @@ export default {
 
       this.operation += "+";
 
-      // for (var i = 0; i < this.operation.length; i++) {
-      //   if (this.operation[i] === "+") {
-      //
-      //   }
+      console.log(this.result)
+      console.log(this.operation)
     },
 
     res() {
       this.input = this.result;
+      console.log(this.result)
+      console.log(this.operation)
     },
 
     // addition() {
