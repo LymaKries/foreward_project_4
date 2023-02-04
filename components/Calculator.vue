@@ -205,6 +205,13 @@ export default {
           this.result *= 1;
           return;
         }
+
+        // if (this.operation[i] === "%") {
+        //   this.input = 1;
+        //   this.operation += "1";
+        //   this.result %= 1;
+        //   return;
+        // }
       }
     },
 
@@ -565,7 +572,7 @@ export default {
       console.log(this.operation)
 
       for (var i = 0; i < this.operation.length; i++) {
-        if (this.operation[i] === "/0"){
+        if (this.operation[i] === "/0" || his.operation[i] === "%0"){
           this.input = "error"
         }
       }
