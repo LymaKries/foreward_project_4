@@ -158,6 +158,13 @@ export default {
           this.result /= 0;
           return;
         }
+
+        if (this.operation[i] === "*") {
+          this.input = 0;
+          this.operation += "0";
+          this.result *= 0;
+          return;
+        }
       }
     },
 
@@ -189,6 +196,13 @@ export default {
           this.input = 1;
           this.operation += "1";
           this.result /= 1;
+          return;
+        }
+
+        if (this.operation[i] === "*") {
+          this.input = 1;
+          this.operation += "1";
+          this.result *= 1;
           return;
         }
       }
@@ -223,6 +237,13 @@ export default {
           this.result /= 2;
           return;
         }
+
+        if (this.operation[i] === "*") {
+          this.input = 2;
+          this.operation += "2";
+          this.result *= 2;
+          return;
+        }
       }
     },
 
@@ -253,6 +274,13 @@ export default {
           this.input = 3;
           this.operation += "3";
           this.result /= 3;
+          return;
+        }
+
+        if (this.operation[i] === "*") {
+          this.input = 3;
+          this.operation += "3";
+          this.result *= 3;
           return;
         }
       }
@@ -287,6 +315,13 @@ export default {
           this.result /= 4;
           return;
         }
+
+        if (this.operation[i] === "*") {
+          this.input = 4;
+          this.operation += "4";
+          this.result *= 4;
+          return;
+        }
       }
     },
 
@@ -317,6 +352,13 @@ export default {
           this.input = 5;
           this.operation += "5";
           this.result /= 5;
+          return;
+        }
+
+        if (this.operation[i] === "*") {
+          this.input = 5;
+          this.operation += "5";
+          this.result *= 5;
           return;
         }
       }
@@ -351,6 +393,13 @@ export default {
           this.result /= 6;
           return;
         }
+
+        if (this.operation[i] === "*") {
+          this.input = 6;
+          this.operation += "6";
+          this.result *= 6;
+          return;
+        }
       }
     },
 
@@ -381,6 +430,13 @@ export default {
           this.input = 7;
           this.operation += "7";
           this.result /= 7;
+          return;
+        }
+
+        if (this.operation[i] === "*") {
+          this.input = 7;
+          this.operation += "7";
+          this.result *= 7;
           return;
         }
       }
@@ -415,6 +471,13 @@ export default {
           this.result /= 8;
           return;
         }
+
+        if (this.operation[i] === "*") {
+          this.input = 8;
+          this.operation += "8";
+          this.result *= 8;
+          return;
+        }
       }
     },
 
@@ -445,6 +508,13 @@ export default {
           this.input = 9;
           this.operation += "9";
           this.result /= 9;
+          return;
+        }
+
+        if (this.operation[i] === "*") {
+          this.input = 9;
+          this.operation += "9";
+          this.result *= 9;
           return;
         }
       }
