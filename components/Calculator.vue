@@ -59,7 +59,7 @@
             />
 
             <SmallButton class="bg-amber-500 border-slate-500"
-                         small_button="X"
+                         small_button="x"
                          @button="multiplication"
             />
 
@@ -132,6 +132,24 @@ export default {
 
     },
 
+    zero() {
+      this.input = 0;
+
+      if (this.operation === "") {
+        this.operation = 0;
+        this.result = 0;
+      }
+
+      for (var i = 0; i < this.operation.length; i++) {
+        if (this.operation[i] === "+"){
+          this.input = 0;
+          this.operation += "0";
+          this.result += 0;
+          return;
+        }
+      }
+    },
+
     one() {
       this.input = 1;
 
@@ -139,9 +157,6 @@ export default {
         this.input = 1;
         this.operation = 1;
         this.result = 1;
-        console.log('vide')
-        console.log(this.operation)
-        console.log(this.result)
       }
 
       for (var i = 0; i < this.operation.length; i++) {
@@ -149,13 +164,10 @@ export default {
           this.input = 1;
           this.operation += "1";
           this.result += 1;
-          console.log('ya un +')
-          console.log(this.operation)
-          console.log(this.result)
           return;
         }
-
       }
+
     },
 
     two() {
@@ -164,8 +176,6 @@ export default {
       if (this.operation === "") {
         this.operation = 2;
         this.result = 2;
-        console.log(this.operation)
-        console.log(this.result)
       }
 
       for (var i = 0; i < this.operation.length; i++) {
@@ -173,21 +183,134 @@ export default {
           this.input = 2;
           this.operation += "2";
           this.result += 2;
-          console.log('ya un +')
-          console.log(this.operation)
-          console.log(this.result)
           return;
         }
+      }
+    },
 
-        // if (this.operation.length > 0 && this.operation.lenght-1 !== "+"){
-        //     this.input += 2;
-        //     this.operation += "2";
-        //     this.result += 2;
-        //     console.log('rajoute chiffre')
-        //     console.log(this.operation)
-        //     console.log(this.result)
-        //     return;
-        // }
+    three() {
+      this.input = 3;
+
+      if (this.operation === "") {
+        this.operation = 3;
+        this.result = 3;
+      }
+
+      for (var i = 0; i < this.operation.length; i++) {
+        if (this.operation[i] === "+"){
+          this.input = 3;
+          this.operation += "3";
+          this.result += 3;
+          return;
+        }
+      }
+    },
+
+    four() {
+      this.input =4;
+
+      if (this.operation === "") {
+        this.operation = 4;
+        this.result = 4;
+      }
+
+      for (var i = 0; i < this.operation.length; i++) {
+        if (this.operation[i] === "+"){
+          this.input = 4;
+          this.operation += "4";
+          this.result += 4;
+          return;
+        }
+      }
+    },
+
+    five() {
+      this.input = 5;
+
+      if (this.operation === "") {
+        this.operation = 5;
+        this.result = 5;
+      }
+
+      for (var i = 0; i < this.operation.length; i++) {
+        if (this.operation[i] === "+"){
+          this.input = 5;
+          this.operation += "5";
+          this.result += 5;
+          return;
+        }
+      }
+    },
+
+    six() {
+      this.input = 6;
+
+      if (this.operation === "") {
+        this.operation = 6;
+        this.result = 6;
+      }
+
+      for (var i = 0; i < this.operation.length; i++) {
+        if (this.operation[i] === "+"){
+          this.input = 6;
+          this.operation += "6";
+          this.result += 6;
+          return;
+        }
+      }
+    },
+
+    seven() {
+      this.input = 7;
+
+      if (this.operation === "") {
+        this.operation = 7;
+        this.result = 7;
+      }
+
+      for (var i = 0; i < this.operation.length; i++) {
+        if (this.operation[i] === "+"){
+          this.input = 2;
+          this.operation += "2";
+          this.result += 2;
+          return;
+        }
+      }
+    },
+
+    eight() {
+      this.input = 8;
+
+      if (this.operation === "") {
+        this.operation = 8;
+        this.result = 8;
+      }
+
+      for (var i = 0; i < this.operation.length; i++) {
+        if (this.operation[i] === "+"){
+          this.input = 8;
+          this.operation += "8";
+          this.result += 8;
+          return;
+        }
+      }
+    },
+
+    nine() {
+      this.input = 9;
+
+      if (this.operation === "") {
+        this.operation = 9;
+        this.result = 9;
+      }
+
+      for (var i = 0; i < this.operation.length; i++) {
+        if (this.operation[i] === "+"){
+          this.input = 9;
+          this.operation += "9";
+          this.result += 9;
+          return;
+        }
       }
     },
 
