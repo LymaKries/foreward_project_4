@@ -127,9 +127,6 @@ export default {
       this.operation = "";
       this.result = 0;
       this.input = 0;
-      console.log(this.result)
-      console.log(this.operation)
-
     },
 
     zero() {
@@ -147,6 +144,20 @@ export default {
           this.result += 0;
           return;
         }
+
+        if (this.operation[i] === "-") {
+          this.input = 0;
+          this.operation += "0";
+          this.result -= 0;
+          return;
+        }
+
+        if (this.operation[i] === "/") {
+          this.input = 0;
+          this.operation += "0";
+          this.result /= 0;
+          return;
+        }
       }
     },
 
@@ -160,14 +171,27 @@ export default {
       }
 
       for (var i = 0; i < this.operation.length; i++) {
-        if (this.operation[i] === "+"){
+        if (this.operation[i] === "+") {
           this.input = 1;
           this.operation += "1";
           this.result += 1;
           return;
         }
-      }
 
+        if (this.operation[i] === "-") {
+          this.input = 1;
+          this.operation += "1";
+          this.result -= 1;
+          return;
+        }
+
+        if (this.operation[i] === "/") {
+          this.input = 1;
+          this.operation += "1";
+          this.result /= 1;
+          return;
+        }
+      }
     },
 
     two() {
@@ -183,6 +207,20 @@ export default {
           this.input = 2;
           this.operation += "2";
           this.result += 2;
+          return;
+        }
+
+        if (this.operation[i] === "-") {
+          this.input = 2;
+          this.operation += "2";
+          this.result -= 2;
+          return;
+        }
+
+        if (this.operation[i] === "/") {
+          this.input = 2;
+          this.operation += "2";
+          this.result /= 2;
           return;
         }
       }
@@ -203,6 +241,20 @@ export default {
           this.result += 3;
           return;
         }
+
+        if (this.operation[i] === "-") {
+          this.input = 3;
+          this.operation += "3";
+          this.result -= 3;
+          return;
+        }
+
+        if (this.operation[i] === "/") {
+          this.input = 3;
+          this.operation += "3";
+          this.result /= 3;
+          return;
+        }
       }
     },
 
@@ -219,6 +271,20 @@ export default {
           this.input = 4;
           this.operation += "4";
           this.result += 4;
+          return;
+        }
+
+        if (this.operation[i] === "-") {
+          this.input = 4;
+          this.operation += "4";
+          this.result -= 4;
+          return;
+        }
+
+        if (this.operation[i] === "/") {
+          this.input = 4;
+          this.operation += "4";
+          this.result /= 4;
           return;
         }
       }
@@ -239,6 +305,20 @@ export default {
           this.result += 5;
           return;
         }
+
+        if (this.operation[i] === "-") {
+          this.input = 5;
+          this.operation += "5";
+          this.result -= 5;
+          return;
+        }
+
+        if (this.operation[i] === "/") {
+          this.input = 5;
+          this.operation += "5";
+          this.result /= 5;
+          return;
+        }
       }
     },
 
@@ -257,6 +337,20 @@ export default {
           this.result += 6;
           return;
         }
+
+        if (this.operation[i] === "-") {
+          this.input = 6;
+          this.operation += "6";
+          this.result -= 6;
+          return;
+        }
+
+        if (this.operation[i] === "/") {
+          this.input = 6;
+          this.operation += "6";
+          this.result /= 6;
+          return;
+        }
       }
     },
 
@@ -270,9 +364,23 @@ export default {
 
       for (var i = 0; i < this.operation.length; i++) {
         if (this.operation[i] === "+"){
-          this.input = 2;
-          this.operation += "2";
-          this.result += 2;
+          this.input = 7;
+          this.operation += "7";
+          this.result += 7;
+          return;
+        }
+
+        if (this.operation[i] === "-") {
+          this.input = 7;
+          this.operation += "7";
+          this.result -= 7;
+          return;
+        }
+
+        if (this.operation[i] === "/") {
+          this.input = 7;
+          this.operation += "7";
+          this.result /= 7;
           return;
         }
       }
@@ -293,6 +401,20 @@ export default {
           this.result += 8;
           return;
         }
+
+        if (this.operation[i] === "-") {
+          this.input = 8;
+          this.operation += "8";
+          this.result -= 8;
+          return;
+        }
+
+        if (this.operation[i] === "/") {
+          this.input = 8;
+          this.operation += "8";
+          this.result /= 8;
+          return;
+        }
       }
     },
 
@@ -311,6 +433,20 @@ export default {
           this.result += 9;
           return;
         }
+
+        if (this.operation[i] === "-") {
+          this.input = 9;
+          this.operation += "9";
+          this.result -= 9;
+          return;
+        }
+
+        if (this.operation[i] === "/") {
+          this.input = 9;
+          this.operation += "9";
+          this.result /= 9;
+          return;
+        }
       }
     },
 
@@ -320,21 +456,62 @@ export default {
       }
 
       this.operation += "+";
+    },
 
-      console.log(this.result)
-      console.log(this.operation)
+    division() {
+      if (this.operation === "") {
+        this.operation = "0/";
+      }
+
+      this.operation += "/";
+    },
+
+    multiplication() {
+      if (this.operation === "") {
+        this.operation = "0*";
+      }
+
+      this.operation += "*";
+    },
+
+    soustraction() {
+      if (this.operation === "") {
+        this.operation = "0-";
+      }
+
+      this.operation += "-";
+    },
+
+    modulo() {
+      if (this.operation === "") {
+        this.operation = "0%";
+      }
+
+      this.operation += "%";
     },
 
     res() {
       this.input = this.result;
-      console.log(this.result)
       console.log(this.operation)
+
+      for (var i = 0; i < this.operation.length; i++) {
+        if (this.operation[i] === "/0"){
+          this.input = "error"
+        }
+      }
     },
 
-    // addition() {
-    //   this.operation
-    // }
-    },
+    decimal() {
+
+      if (this.operation === "") {
+        this.operation = "0.";
+      } else {
+        this.operation += ".";
+      }
+      this.result += ".";
+      this.input += ".";
+    }
+  },
 }
 
 </script>
