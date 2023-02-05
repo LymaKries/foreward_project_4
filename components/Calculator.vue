@@ -132,8 +132,6 @@ export default {
     },
 
     zero() {
-      this.input = 0;
-
       if (this.operation === "") {
         this.operation = 0;
         this.result = 0;
@@ -176,21 +174,16 @@ export default {
         }
 
         if (this.operation[i] === ".") {
-          console.log('hey');
-          console.log(this.input);
-          console.log(this.operation);
-          this.input += ".0";
+          this.input += "0";
           this.operation += "0";
           this.result += 0.0;
           return;
         }
       }
+      this.input = 0;
     },
 
     one() {
-      this.input = 1;
-      console.log(this.input);
-
 
       if (this.operation === "") {
         this.input = 1;
@@ -228,19 +221,17 @@ export default {
         }
 
         if (this.operation[i] === ".") {
-          console.log('hey');
-          console.log(this.input);
-          console.log(this.operation);
-          this.input += ".1";
+          this.input += "1";
           this.operation += "1";
           this.result += 0.1;
           return;
         }
       }
+      this.input = 1;
     },
 
     two() {
-      this.input = 2;
+      console.log(this.input);
 
       if (this.operation === "") {
         this.operation = 2;
@@ -275,12 +266,19 @@ export default {
           this.result *= 2;
           return;
         }
+
+        if (this.operation[i] === ".") {
+          this.input += "2";
+          this.operation += "2";
+          this.result += 0.2;
+          console.log(this.result);
+          return;
+        }
       }
+      this.input = 2;
     },
 
     three() {
-      this.input = 3;
-
       if (this.operation === "") {
         this.operation = 3;
         this.result = 3;
@@ -314,12 +312,18 @@ export default {
           this.result *= 3;
           return;
         }
+
+        if (this.operation[i] === ".") {
+          this.input += "3";
+          this.operation += "3";
+          this.result += 0.3;
+          return;
+        }
       }
+      this.input = 3;
     },
 
     four() {
-      this.input =4;
-
       if (this.operation === "") {
         this.operation = 4;
         this.result = 4;
@@ -353,12 +357,18 @@ export default {
           this.result *= 4;
           return;
         }
+
+        if (this.operation[i] === ".") {
+          this.input += "4";
+          this.operation += "4";
+          this.result += 0.4;
+          return;
+        }
       }
+      this.input = 4;
     },
 
     five() {
-      this.input = 5;
-
       if (this.operation === "") {
         this.operation = 5;
         this.result = 5;
@@ -392,12 +402,18 @@ export default {
           this.result *= 5;
           return;
         }
+
+        if (this.operation[i] === ".") {
+          this.input += "5";
+          this.operation += "5";
+          this.result += 0.5;
+          return;
+        }
       }
+      this.input = 5;
     },
 
     six() {
-      this.input = 6;
-
       if (this.operation === "") {
         this.operation = 6;
         this.result = 6;
@@ -431,12 +447,18 @@ export default {
           this.result *= 6;
           return;
         }
+
+        if (this.operation[i] === ".") {
+          this.input += "6";
+          this.operation += "6";
+          this.result += 0.6;
+          return;
+        }
       }
+      this.input = 6;
     },
 
     seven() {
-      this.input = 7;
-
       if (this.operation === "") {
         this.operation = 7;
         this.result = 7;
@@ -470,12 +492,18 @@ export default {
           this.result *= 7;
           return;
         }
+
+        if (this.operation[i] === ".") {
+          this.input += "7";
+          this.operation += "7";
+          this.result += 0.7;
+          return;
+        }
       }
+      this.input = 7;
     },
 
     eight() {
-      this.input = 8;
-
       if (this.operation === "") {
         this.operation = 8;
         this.result = 8;
@@ -509,12 +537,18 @@ export default {
           this.result *= 8;
           return;
         }
+
+        if (this.operation[i] === ".") {
+          this.input += "8";
+          this.operation += "8";
+          this.result += 0.8;
+          return;
+        }
       }
+      this.input = 8;
     },
 
     nine() {
-      this.input = 9;
-
       if (this.operation === "") {
         this.operation = 9;
         this.result = 9;
@@ -548,7 +582,15 @@ export default {
           this.result *= 9;
           return;
         }
+
+        if (this.operation[i] === ".") {
+          this.input += "9";
+          this.operation += "9";
+          this.result += 0.9;
+          return;
+        }
       }
+      this.input = 9;
     },
 
     addition() {
@@ -584,21 +626,21 @@ export default {
     },
 
     modulo() {
-      if (this.operation === "") {
-        this.operation = "0%";
-      }
-
-      this.operation += "%";
+      // if (this.operation === "") {
+      //   this.operation = "0%";
+      // }
+      //
+      // this.operation += "%";
+      this.input= "it doesn't work, sorry"
     },
 
     res() {
-      this.input = this.result;
-      console.log(this.operation)
 
       for (var i = 0; i < this.operation.length; i++) {
         if (this.operation[i] === "/0"){
           this.input = "error"
         }
+        this.input = this.result;
       }
     },
 
@@ -608,7 +650,6 @@ export default {
       } else {
         this.operation += ".";
       }
-      this.result += ".";
       this.input += ".";
     }
   },
