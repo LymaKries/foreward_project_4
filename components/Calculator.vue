@@ -6,7 +6,7 @@
       <div class="w-full flex flex-col items-center ">
         <div class="w-56 h-10 pr-1 mb-3 bg-gray-200 border-2 border-zinc-500 rounded bottom-80 text-3xl flex items-center justify-end sm:w-80 sm:h-14 sm:te">{{input}}</div>
 
-        <div class="w-56 h-80 bg-neutral-700 mb-3 border-4 border-zinc-400 rounded-lg sm:w-80 sm:h-96">
+        <div class="w-56 h-72 bg-neutral-700 mb-3 border-4 border-zinc-400 rounded-lg sm:w-80 sm:h-96">
           <div class="grid grid-cols-4 grid-rows-5 gap-2 p-3">
             <BigButton class="bg-neutral-300 border-amber-500 text-neutral-400 pl-3"
                        big_button="AC"

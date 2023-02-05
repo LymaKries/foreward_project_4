@@ -1,11 +1,10 @@
 export default {
 
-  generate: {
-    fallback: true
-  },
-
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
+  router: {
+    base: '/foreward_project_4/'
+  },
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {

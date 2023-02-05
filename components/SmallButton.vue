@@ -1,6 +1,6 @@
 <template>
 
-  <button @click="button" class="h-16 w-16 border-2 rounded-lg text-center flex justify-center items-center text-white text-xl font-bold">{{small_button}}</button>
+  <button @click="button" class="w-11 h-11 border-2 rounded-lg text-center flex justify-center items-center text-white text-xl font-bold sm:h-16 sm:w-16">{{small_button}}</button>
 
 </template>
 
