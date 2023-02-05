@@ -108,12 +108,14 @@
 </template>
 
 
-<script>
+<script setup>
 
 import BottomText from "./BottomText.vue";
 import SmallButton from "./SmallButton.vue";
 import BigButton from "./BigButton.vue";
+</script>
 
+<script>
 export default {
   data() {
     return {
@@ -165,11 +167,30 @@ export default {
           this.result *= 0;
           return;
         }
+
+        if (this.operation[i] === "*") {
+          this.input = 0;
+          this.operation += "0";
+          this.result *= 0;
+          return;
+        }
+
+        if (this.operation[i] === ".") {
+          console.log('hey');
+          console.log(this.input);
+          console.log(this.operation);
+          this.input += ".0";
+          this.operation += "0";
+          this.result += 0.0;
+          return;
+        }
       }
     },
 
     one() {
       this.input = 1;
+      console.log(this.input);
+
 
       if (this.operation === "") {
         this.input = 1;
@@ -206,12 +227,15 @@ export default {
           return;
         }
 
-        // if (this.operation[i] === "%") {
-        //   this.input = 1;
-        //   this.operation += "1";
-        //   this.result %= 1;
-        //   return;
-        // }
+        if (this.operation[i] === ".") {
+          console.log('hey');
+          console.log(this.input);
+          console.log(this.operation);
+          this.input += ".1";
+          this.operation += "1";
+          this.result += 0.1;
+          return;
+        }
       }
     },
 
@@ -572,14 +596,13 @@ export default {
       console.log(this.operation)
 
       for (var i = 0; i < this.operation.length; i++) {
-        if (this.operation[i] === "/0" || his.operation[i] === "%0"){
+        if (this.operation[i] === "/0"){
           this.input = "error"
         }
       }
     },
 
     decimal() {
-
       if (this.operation === "") {
         this.operation = "0.";
       } else {
